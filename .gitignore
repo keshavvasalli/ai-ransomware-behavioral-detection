@@ -7,3 +7,4 @@ __pycache__/
 evidence/screenshots/*.png
 evidence/screenshots/*.jpg
 evidence/screenshots/*.jpeg
+evidence/screenshots/**/*.png
