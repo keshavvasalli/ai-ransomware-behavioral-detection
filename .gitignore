@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 .streamlit/secrets.toml
 .env
+
+evidence/screenshots/*.png
+evidence/screenshots/*.jpg
+evidence/screenshots/*.jpeg
