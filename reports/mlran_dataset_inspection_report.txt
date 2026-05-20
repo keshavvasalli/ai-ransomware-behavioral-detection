@@ -1,0 +1,51 @@
+MLRan Dataset Inspection Report
+========================================
+
+X_train shape: (3905, 487)
+X_test shape: (975, 487)
+Labels shape: (4880, 4)
+Metadata shape: (4880, 19)
+
+Total samples from train + test: 4880
+Total label rows: 4880
+Total metadata rows: 4880
+
+Total columns in X_train: 487
+Non-feature columns: ['sample_id', 'sample_type', 'family_label', 'type_label']
+Detected ML feature columns: 483
+
+Sample type distribution:
+sample_type
+0    2550
+1    2330
+Name: count, dtype: int64
+
+Type label distribution:
+type_label
+0    2550
+1     273
+2    1140
+3     468
+4     449
+Name: count, dtype: int64
+
+Family label count: 65
+
+Verified label meaning from metadata:
+            ransomware_family ransomware_type
+sample_type                                  
+0                    goodware        goodware
+1                cryptolocker          crypto
+
+Initial ML decision:
+Task: Binary classification
+Target column: sample_type
+Class 0: goodware / benign
+Class 1: ransomware
+
+Safety note:
+Only processed behavioural feature files are used.
+No live ransomware binaries are downloaded, executed, or handled.
+
+Feature names JSON top-level type:
+<class 'dict'>
