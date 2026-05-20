@@ -8,3 +8,5 @@ evidence/screenshots/*.png
 evidence/screenshots/*.jpg
 evidence/screenshots/*.jpeg
 evidence/screenshots/**/*.png
+data/raw/mlran/*
+!data/raw/mlran/.gitkeep
