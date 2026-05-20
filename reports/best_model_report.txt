@@ -1,0 +1,47 @@
+Best Model Training Report
+=============================================
+
+Selected model: Logistic Regression
+Reason: Best F1-score during model comparison
+
+Task: Binary ransomware detection
+Target column: sample_type
+Class 0: goodware / benign
+Class 1: ransomware
+
+Training shape: (3905, 483)
+Testing shape: (975, 483)
+
+Evaluation Metrics
+---------------------------------------------
+Accuracy:  0.9785
+Precision: 0.9703
+Recall:    0.9849
+F1-score:  0.9776
+
+Confusion Matrix
+---------------------------------------------
+[[496  14]
+ [  7 458]]
+
+Classification Report
+---------------------------------------------
+                 precision    recall  f1-score   support
+
+goodware_benign       0.99      0.97      0.98       510
+     ransomware       0.97      0.98      0.98       465
+
+       accuracy                           0.98       975
+      macro avg       0.98      0.98      0.98       975
+   weighted avg       0.98      0.98      0.98       975
+
+
+Saved Files
+---------------------------------------------
+Model file: C:\Users\91789\Desktop\ai-ransomware-behavioral-detection\models\best_logistic_regression_model.joblib
+Feature columns file: C:\Users\91789\Desktop\ai-ransomware-behavioral-detection\models\feature_columns.json
+
+Safety Note
+---------------------------------------------
+This model uses processed behavioural feature data only.
+No live ransomware binaries are downloaded, executed, or handled.
