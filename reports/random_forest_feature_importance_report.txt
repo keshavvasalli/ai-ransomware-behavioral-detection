@@ -1,0 +1,70 @@
+Random Forest Feature Importance Report
+==================================================
+
+Task: Binary ransomware detection
+Target column: sample_type
+Class 0: goodware / benign
+Class 1: ransomware
+
+Model Performance Check
+--------------------------------------------------
+Accuracy:  0.9662
+Precision: 0.9596
+Recall:    0.9699
+F1-score:  0.9647
+
+Top 30 Important Behavioural Features
+--------------------------------------------------
+1. SYSTEM:DLL_LOADED:uxtheme.dll (feature_id=6413348, importance=0.050551)
+2. SYSTEM:DLL_LOADED:c:\windows\system32\ole32.dll (feature_id=6412331, importance=0.044764)
+3. REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CTF\TIP\{0000897b-83df-4b96-be07-0fb58b01c4a4}\LanguageProfile\0x00000000\{0001bea3-ed56-483d-a2e2-aeae25577436}\Enable (feature_id=214391, importance=0.032781)
+4. STRING:!this program cannot be run in dos mode. (feature_id=2944930, importance=0.031658)
+5. REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Language Hotkey (feature_id=140100, importance=0.025388)
+6. REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Hotkey (feature_id=140099, importance=0.024650)
+7. REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\CTF\TIP\{0000897b-83df-4b96-be07-0fb58b01c4a4}\LanguageProfile\0x00000000\{0001bea3-ed56-483d-a2e2-aeae25577436} (feature_id=119780, importance=0.024615)
+8. SYSTEM:DLL_LOADED:dwmapi.dll (feature_id=6412800, importance=0.015484)
+9. REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\CTF\LayoutIcon\0409\00020409 (feature_id=35566, importance=0.015066)
+10. REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-4114181432-2397392814-2180606575-500\ProfileImagePath (feature_id=237274, importance=0.014991)
+11. DROP:EXTENSION:dat (feature_id=6423452, importance=0.014778)
+12. REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58f1-7f9a-11ef-945b-806e6f6e6963}\ (feature_id=40475, importance=0.014488)
+13. REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-4114181432-2397392814-2180606575-500 (feature_id=120875, importance=0.013987)
+14. REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Layout Hotkey (feature_id=140101, importance=0.013548)
+15. API:LdrGetProcedureAddress (feature_id=18, importance=0.013255)
+16. SYSTEM:DLL_LOADED:c:\windows\syswow64\msctf.dll (feature_id=6412541, importance=0.013217)
+17. REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\CTF\EnableAnchorContext (feature_id=378629, importance=0.011557)
+18. FILE:OPENED:c:\windows\globalization\sorting\sortdefault.nls (feature_id=2117027, importance=0.011211)
+19. SYSTEM:GUID:{56fdf344-fd6d-11d0-958a-006097c9a090} (feature_id=6413830, importance=0.011042)
+20. STRING:kernel32.dll (feature_id=5143602, importance=0.010991)
+21. API:DrawTextExW (feature_id=113, importance=0.010925)
+22. REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ed-7f9a-11ef-945b-806e6f6e6963}\Generation (feature_id=153297, importance=0.010793)
+23. REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ed-7f9a-11ef-945b-806e6f6e6963}\ (feature_id=40471, importance=0.010041)
+24. SYSTEM:DLL_LOADED:c:\windows\system32\xmllite.dll (feature_id=6412506, importance=0.009932)
+25. REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer (feature_id=40716, importance=0.009143)
+26. REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ee-7f9a-11ef-945b-806e6f6e6963}\Data (feature_id=153298, importance=0.008849)
+27. SYSTEM:DLL_LOADED:msimg32.dll (feature_id=6413071, importance=0.008823)
+28. FILE:FAILED:c:\users\administrator\appdata\local\temp (feature_id=1845849, importance=0.008527)
+29. SYSTEM:GUID:{2933bf81-7b36-11d2-b20e-00c04f983e60} (feature_id=6413657, importance=0.008330)
+30. SYSTEM:GUID:{f5078f32-c551-11d3-89b9-0000f81fe221} (feature_id=6414405, importance=0.008288)
+
+Feature Category Importance Summary
+--------------------------------------------------
+feature_category
+REG          0.352745
+SYSTEM       0.232572
+STRING       0.189124
+API          0.123232
+DROP         0.039314
+SIGNATURE    0.031347
+FILE         0.028931
+DIRECTORY    0.002736
+Name: importance, dtype: float64
+
+Output Files
+--------------------------------------------------
+Full CSV: C:\Users\91789\Desktop\ai-ransomware-behavioral-detection\reports\random_forest_feature_importance.csv
+Text report: C:\Users\91789\Desktop\ai-ransomware-behavioral-detection\reports\random_forest_feature_importance_report.txt
+
+Safety Note
+--------------------------------------------------
+This analysis uses processed behavioural feature data only.
+No live ransomware binaries are downloaded, executed, or handled.
