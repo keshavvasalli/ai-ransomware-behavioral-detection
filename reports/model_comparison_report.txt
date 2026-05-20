@@ -1,0 +1,64 @@
+ML Model Comparison Report
+=============================================
+
+Task: Binary ransomware detection
+Target column: sample_type
+Class 0: goodware / benign
+Class 1: ransomware
+
+Training shape: (3905, 483)
+Testing shape: (975, 483)
+
+Random Forest
+---------------------------------------------
+Accuracy:  0.9662
+Precision: 0.9596
+Recall:    0.9699
+F1-score:  0.9647
+
+Confusion Matrix:
+[[491  19]
+ [ 14 451]]
+
+Classification Report:
+                 precision    recall  f1-score   support
+
+goodware_benign       0.97      0.96      0.97       510
+     ransomware       0.96      0.97      0.96       465
+
+       accuracy                           0.97       975
+      macro avg       0.97      0.97      0.97       975
+   weighted avg       0.97      0.97      0.97       975
+
+
+Logistic Regression
+---------------------------------------------
+Accuracy:  0.9785
+Precision: 0.9703
+Recall:    0.9849
+F1-score:  0.9776
+
+Confusion Matrix:
+[[496  14]
+ [  7 458]]
+
+Classification Report:
+                 precision    recall  f1-score   support
+
+goodware_benign       0.99      0.97      0.98       510
+     ransomware       0.97      0.98      0.98       465
+
+       accuracy                           0.98       975
+      macro avg       0.98      0.98      0.98       975
+   weighted avg       0.98      0.98      0.98       975
+
+
+Best Model Based on F1-score
+---------------------------------------------
+Model: Logistic Regression
+F1-score: 0.9776
+
+Safety Note
+---------------------------------------------
+This comparison uses processed behavioural feature data only.
+No live ransomware binaries are downloaded, executed, or handled.
