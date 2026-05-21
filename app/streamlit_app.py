@@ -517,8 +517,16 @@ try:
     )
 
     st.markdown("#### Class Probability Scores")
-    st.dataframe(probability_df, width="stretch")
-    st.bar_chart(probability_df.set_index("Class"))
+
+    prob_col1, prob_col2 = st.columns(2)
+
+    with prob_col1:
+        st.metric("Goodware / Benign Probability", f"{benign_probability:.2%}")
+        st.progress(float(benign_probability))
+
+    with prob_col2:
+        st.metric("Ransomware Probability", f"{ransomware_probability:.2%}")
+        st.progress(float(ransomware_probability))
 
     render_section("Interpretability", "Feature Analysis / Explainability")
 
