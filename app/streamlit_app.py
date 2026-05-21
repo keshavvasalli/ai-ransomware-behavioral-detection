@@ -547,11 +547,13 @@ try:
             '<div class="small-muted">Top model coefficient features from the selected feature vector. Feature weights are shown only where directly accessible from the saved model pipeline.</div>',
             unsafe_allow_html=True,
         )
+        styled_importance_df = importance_df[["Feature", "Coefficient", "Absolute Weight"]].copy()
+
         st.dataframe(
-            importance_df[["Feature", "Coefficient", "Absolute Weight"]],
+            styled_importance_df,
             width="stretch",
+            hide_index=True,
         )
-        st.bar_chart(importance_df.set_index("Feature")["Absolute Weight"])
 
     render_section("Sample Data", "Selected Sample — Behavioural Features")
 
