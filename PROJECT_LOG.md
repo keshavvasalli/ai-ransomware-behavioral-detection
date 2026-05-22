@@ -38,3 +38,37 @@
 * Committed and pushed Streamlit model integration update to GitHub.
 * Latest commit: `45ddff1 Integrate saved model into Streamlit app`.
 
+
+
+
+
+
+
+# 22 May 2026
+
+
+
+\#Dashboard Command-Center Layout Update
+
+
+
+* The Streamlit dashboard was redesigned into a command-center style interface to make the AI-driven behavioural ransomware detection prototype more professional and easier to present. The updated dashboard includes a clearer system overview, prediction demo, model performance section, confusion matrix, feature analysis, selected sample preview, workflow explanation, and project information.
+
+
+
+* The implementation remains thesis-safe because it uses only pre-extracted MLRan behavioural features. No live ransomware files are uploaded, executed, or analysed.
+
+
+
+* Latest dashboard commit:
+
+&#x20;  `b6c692a Restore working command center dashboard layout`
+
+
+
+* Known minor UI limitations:
+
+\- Some Streamlit-rendered tables still use default light styling.
+
+\- The How It Works icons may need minor visual refinement later.
+
